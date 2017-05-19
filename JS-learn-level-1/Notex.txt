@@ -72,9 +72,11 @@ How to run .js programs?
 
 
     1. data-types
-    2. execution-contexts
+    2. execution-contexts / scope(s)
     3. functions-depth
-    4. 'this' keyword 
+
+    4. 'this' keyword   // dynamic/static function binding
+    
     5. closures
     6. inheritance
     7. objects-depth
