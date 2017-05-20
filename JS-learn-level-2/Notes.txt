@@ -1,0 +1,53 @@
+
+
+
+ECMAScript-2015 / ES6
+---------------------
+
+ A. New Syntax
+ -----------------
+
+    1. let & const keywords with block-scope
+    2. function default params
+    3. rest param
+    4. arrow function
+    5. destructuring
+    6. spread operator
+    7. for-of-loop
+    8. octal & binary num
+    9. string interpolation
+    10. ierators & generators
+
+
+
+ES Modules
+----------
+
+B. New OO syntax
+-----------------
+
+    1. class syntax
+
+C. Collections
+-----------------
+
+    1. Set
+    2. Map
+
+ D. New Data-Type
+ -----------------
+
+    1. Symbols
+
+E. API Extensions
+
+F. Promise API
+
+---------------------------------------    
+
+
+
+
+
+
+   

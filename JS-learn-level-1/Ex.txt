@@ -1,0 +1,14 @@
+
+ // Ex   
+
+  step-1 : create Trainer-Service obj with doTeach method 
+
+  step-2 : create new-Trainer obj with 'Name' property
+
+  step-3 : Bind service-method with that new-Trainer
+
+  if required
+
+  step-4 : call service method with any subject
+
+  
