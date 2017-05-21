@@ -1,0 +1,109 @@
+
+
+ what .js-lang can do on HTML-pages in browser-envi?
+
+ using browser provided APIs , can do any dynamic-activity on web-page
+
+ browser provided APIs ==> DOM , XHR , Timer API  are based on w3c spec
+
+
+ * all web APIs must be implemented & abstracted as .js objects & func by browsers
+
+
+ using DOM
+ -----------
+    --> can create/retreive/update/delete html elements
+    --> can change element's style
+    --> can change element's attributes/properties
+    --> can change element's text/innerHTML
+    --> can listen event(s) on elements
+    --> can create rich UI components
+    .......
+
+using XHR
+----------
+    --> can communicate with server-side async, update resp in existing page ( AJAX )
+
+using Timer API
+---------------
+    --> can do timeOut/timeInterval based oprns
+
+
+HTML5 APIs
+---------------
+
+    --> https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5
+
+
+refer : http://caniuse.com/#  . browser compatibility
+
+
+
+--------------------------------------------------------
+
+
+
+ problems with plain-js on front-end appln dev
+ -----------------------------------------------
+
+
+    --> browser compatability
+    --> performance issues  ( e.g DOM query & manupulation is costly process , need to be minimal)
+    --> memory management   ( e.g cleaning un-used DOM elements )
+    --> code organization difficult ( when view changes , script will get change)
+    --> data-binding is manual
+    ........
+
+    -------------------------------------------------------
+
+
+    solns:
+
+    --> using third-party .js libraries and Frameworks
+
+
+
+        a. jQuery
+
+            ->DOM utility library + other features
+
+
+            limitations
+            -----------
+
+            --> close to DOM
+            --> code oraganization is difficult
+            --> data-bindin manual    
+
+          ----------------------------------------
+
+          MVC/MVVM based .js lib & F.Ws
+
+          1. Backbone
+              - 
+          2. Knockout
+          3. Angular 1.x
+          4. Ember js
+
+          .........
+
+
+          ----------------------------------------
+
+          UI component based .js f.ws
+
+          1. DOJO
+          2. EXT JS   ( commercial )
+
+
+          ---------------------------------------
+
+
+            w3c ==> web-component standards
+
+
+
+            a. React 
+            b. Angular 2
+            c. POlymer .js
+            ....
