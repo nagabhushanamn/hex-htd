@@ -13,10 +13,11 @@ ECMAScript-2015 / ES6
     4. arrow function
     5. destructuring
     6. spread operator
-    7. for-of-loop
-    8. octal & binary num
-    9. string interpolation
-    10. ierators & generators
+    7. obj-literal enhancements
+    8. for-of-loop
+    9. octal & binary num
+    10. string interpolation
+    11. iterators & generators
 
 
 
