@@ -1,0 +1,62 @@
+
+
+ 
+
+ problems with .js dev without module standards
+ 
+ ==> global-Naming collisions
+
+     soln : using self-executable functions
+
+ ==> loading dependecy modules in order is difficult
+
+
+
+Soln:
+
+    using module-standards & loaders
+
+
+
+    from third-parties
+
+    1. AMD ( Asyncronous Module Standard)
+    2. commonJS ( most using module standard)
+    3. UMD
+    ....
+
+    from ECMAScript spec
+
+    4. ES6 Modules
+
+
+    ----------------------------------------
+
+    commonJS module standard
+
+
+    --> every .js is a module by default
+    --> all var/func in .js file are private by default
+    --> to export any member to other modules, use "module.exports"
+    --> to import any member from other modules, use "require()"
+    --> we can group related modules as packages with description file ( package.json)
+
+    imp-Note :
+
+      CommonJS is  Node.js's default module standard 
+      
+    ----------------------------------------
+
+
+    ECMAScript module standard
+
+
+    --> every .js is a module by default
+    --> all var/func in .js file are private by default
+    --> to export any member to other modules, use "export" keyword
+    --> to import any member from other modules, use "import" keyword
+
+
+    ----------------------------------------
+    
+
