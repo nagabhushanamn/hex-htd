@@ -1,0 +1,24 @@
+
+
+.js-lang
+
+    --> single-threaded lang , we can do cuncurrent actions
+    --> All IO opearations are Non-Blocking
+
+    -------------------------------------------------------
+
+    browser , e.g chrome
+
+    1. JS Runtime ( v8 )  : based on ECMAScript spec
+
+        a. call-stack  ==> to execute contexts
+        b. Heap        ===> to keep objects
+
+
+    2. Web APIs e.g DOM, XHR , Timer , .....   : based on W3c spec
+
+    3. Event Queue
+
+    4. Event-Loop    
+
+    -------------------------------------------------------
