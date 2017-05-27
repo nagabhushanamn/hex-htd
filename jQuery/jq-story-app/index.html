@@ -6,62 +6,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    
     <nav class="navbar navbar-default">
         <div class="container">
-           <div class="navbar-brand">story-app</div>     
-        </div>    
+            <div class="navbar-brand">story-app</div>
+        </div>
     </nav>
-
     <div class="container">
-        
         <div class="row">
             <div class="col-md-6">
-                <div class="panel panel-primary">
+                <div class="panel panel-default">
                     <div class="panel-heading"> Story Form </div>
                     <div class="panel-body">
                         <form>
                             <div class="form-group">
                                 <label> Email/Name </label>
-                                <input class="form-control"/>
-                            </div> 
+                                <input class="form-control" />
+                            </div>
                             <div class="form-group">
                                 <label> story </label>
                                 <textarea rows="5" class="form-control"></textarea>
-                            </div>  
-                            <button class="btn btn-primary">Submit</button>  
-                        </form>    
+                            </div>
+                            <button class="btn btn-primary">Submit</button>
+                        </form>
                     </div>
-                </div>   
-            </div>    
-        </div>    
-
+                </div>
+            </div>
+        </div>
         <hr/>
-
-        <div class="list-group">
-            <div class="list-group-item alert alert-info">
-                <blockquote>
-                    <span class="badge">Nagabhushanam</span>
-                    <hr/>
-                    <p> am going to have party today</p>
-                    <button class="btn btn-sm btn-default pull-right">delete</button>
-                </blockquote>   
-            </div>  
-             <div class="list-group-item alert alert-info">
-                <blockquote>
-                    <span class="badge">Kannan</span>
-                    <hr/>
-                    <p> am going to home </p>
-                    <button class="btn btn-sm btn-default pull-right">delete</button>
-                </blockquote>   
-            </div>    
-        </div>    
-
+        <div class="panel panel-default">
+            <div class="panel-heading"> All stories </div>
+            <div class="panel-body">
+                <div class="list-group">
+                    <div class="list-group-item">
+                        <blockquote>
+                            <div class="bg-info story">
+                                <span class="badge">Nagabhushanam</span>
+                                <hr/>
+                                <p>Am going to have party today</p>
+                            </div>
+                            <button class="btn btn-sm btn-default pull-right">delete</button>
+                        </blockquote>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
     </div>
-  
 </body>
 
 </html>
