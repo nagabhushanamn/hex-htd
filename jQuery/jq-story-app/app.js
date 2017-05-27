@@ -1,18 +1,14 @@
 $(function () {
 
+    let apiUrl = "http://localhost:3000/api/stories";
+    let data = [];
 
-    let data = [{
-            id: 1,
-            name: 'Nagabhushanam',
-            storyText: 'i hate working on weekends'
-        },
-        {
-            id: 1,
-            name: 'Kannan',
-            storyText: 'bla bla bla'
+    $.ajax(apiUrl, {
+        success: function (resp) {
+            data = resp;
+            renderAllStories(data);
         }
-    ];
-
+    });
 
     //--------------------------------------------------------
 
@@ -48,9 +44,6 @@ $(function () {
         allStoriesListGroup.append(all.join(" "));
     }
 
-    //-------------------------------------------------------
-
-    renderAllStories(data);
 
     //--------------------------------------------------------
 
@@ -99,13 +92,22 @@ $(function () {
             storyText
         };
 
-        allStoriesListGroup.prepend(renderStory(newStory));
+        $.ajax(apiUrl, {
+            method: 'POST',
+            "contentType": "application/json",
+            data: JSON.stringify(newStory),
+            success: function (story) {
+                
+                allStoriesListGroup.prepend(renderStory(newStory));
 
-        nameField.val("");
-        storyField.val("");
+                nameField.val("");
+                storyField.val("");
 
-        storyFormPanel.hide();
-        btn.text('New Story');
+                storyFormPanel.hide();
+                btn.text('New Story');
+
+            }
+        });
 
         //--------------------------------------------------------------
 
