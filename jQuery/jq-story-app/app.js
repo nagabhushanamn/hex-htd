@@ -97,7 +97,7 @@ $(function () {
             "contentType": "application/json",
             data: JSON.stringify(newStory),
             success: function (story) {
-                
+
                 allStoriesListGroup.prepend(renderStory(newStory));
 
                 nameField.val("");
