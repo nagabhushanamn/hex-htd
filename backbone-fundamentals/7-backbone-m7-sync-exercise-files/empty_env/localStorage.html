@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <!--<link rel="stylesheet" href="style.css">-->
+    <script src="jquery-1.7.2.js"></script>
+    <script src="underscore.js"></script>
+    <script src="backbone.js"></script>
+    <script src="https://raw.github.com/jeromegn/Backbone.localStorage/master/backbone.localStorage.js"></script>
+  </head>
+  <body>
+
+  	<script type="text/javascript">
+  		var Person = Backbone.Model.extend({}),
+  		People = Backbone.Collection.extend({
+  			model: Person,
+        localStorage: new Backbone.LocalStorage("People")
+  		});
+
+      var people = new People([{name: 'John', age: 19}, {name: 'Sarah', age: 64}]),
+      john = people.at(0),
+      sarah = people.at(1);
+
+      people.at(0).save(); // view xhr network
+      people.at(1).save();
+
+      people.fetch({// view xhr network
+        success: function () {
+            JSON.stringify(people);
+        }
+      });   
+  	</script>
+  </body>
+</html>

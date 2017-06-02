@@ -1,0 +1,13 @@
+curl -vX POST http://localhost:3002/people -H "Content-Type: application/json" -d '{"name": "Bob", "age":"24"}'
+
+curl -v http://localhost:3002/people
+
+ curl -vX PUT http://localhost:3002/people/[id] -H "Content-Type: application/json" -d
+ '{"name": "Robert", "age":"24"}'
+
+curl -v http://localhost:3002/people/[id]
+
+curl -vX DELETE http://localhost:3002/people/[id]
+
+curl -v http://localhost:3002/people
+
