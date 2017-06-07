@@ -5,5 +5,7 @@ var app = app || {};
 
 
 $(function () {
-    new app.AppView().render();  // on document ready ! creating instance of AppView
+
+    new app.AppView();  // on document ready ! creating instance of AppView
+
 });

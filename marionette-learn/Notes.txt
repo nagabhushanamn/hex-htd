@@ -1,0 +1,57 @@
+
+
+
+
+  Building large web application using Backbone.js can be hard.
+
+
+ Life in  Backbone.js 
+
+  -> How do you revder Views?
+  -> How do you manage r/s b/w objects?
+  -> How do your Views communicate b/w each other
+  -> How do you avoid reating yourself?
+  -> How do you manage a View's Lifecycle?
+  -> How do you structure your application?
+  -> Ho do you prevent memory leaks?
+
+  ---------------
+
+
+    what Maroinette gives you ?
+
+
+    --> A standardized Rendeing process
+    --> A consistent View Lifecycle
+    --> The ability to define and manage complex layouts
+    --> A central event-bus , we can simplify communication b/w Views
+    --> Helpers to help you write DRY code
+    --> Helpers to remove "un-used Views" and avoid memory leaks
+    --> A central application object to initliaze our application
+
+    ----------------------------------------------------------------
+
+
+   
+    to bundle commonJS .js modules to browser used
+
+    we have many tools
+
+    --> browserify
+    --> webpack
+
+
+    ----------------------------------------------------------------
+
+
+
+    steps:
+
+
+    --> configure web-pack . ( module bundler )
+
+    --> install required packages
+
+    --> creaet entry module ( index.js )
+
+    ----------------------------------------------------------------

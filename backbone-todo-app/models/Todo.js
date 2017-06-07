@@ -8,6 +8,13 @@ var app = app || {};
         defaults: {
             title: '',
             completed: false
+        },
+        idAttribute: 'id',
+        urlRoot: 'http://0.0.0.0:8181/api/todos/',
+        toggle() {
+            this.save({
+                completed: !this.get('completed')
+            });
         }
 
     });

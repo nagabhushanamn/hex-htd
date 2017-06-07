@@ -6,6 +6,8 @@ var app = app || {};
 
     var Todos = Backbone.Collection.extend({
         model: app.Todo,
+        //localStorage: new Backbone.LocalStorage("my-todos"),
+        url: 'http://0.0.0.0:8181/api/todos',
         completed: function () {
             return this.where({ completed: true });
         },
@@ -19,10 +21,6 @@ var app = app || {};
     });
 
     let todos = new Todos(); // to have single instance of this collection class
-
-    // hard-coded todo
-    todos.add({ id: 1, title: 'Learn JavaScript', completed: true });
-    todos.add({ id: 2, title: 'Learn Backbone.js', completed: false });
 
     app.todos = todos;
 

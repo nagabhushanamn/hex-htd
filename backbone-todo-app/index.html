@@ -19,7 +19,7 @@
             <input type="checkbox" class="toggle-all" id="toggle-all" />
             <label for="toggle-all"> Marl all as complete </label>
             <ul class="todo-list">
-                
+
             </ul>
             <footer class="footer"></footer>
         </section>
@@ -32,16 +32,39 @@
             <button class="destroy"></button>
         </div>
     </script>
+    <script type="text/template" id="footer-template">
+
+        <!-- This should be `0 items left` by default -->
+        <span class="todo-count"><strong><%=remaining%></strong> <%=remaining===1?'item':'items'%> left</span>
+        <!-- Remove this if you don't implement routing -->
+        <ul class="filters">
+            <li>
+                <a class="selected" href="#/">All</a>
+            </li>
+            <li>
+                <a href="#/active">Active</a>
+            </li>
+            <li>
+                <a href="#/completed">Completed</a>
+            </li>
+        </ul>
+        <!-- Hidden if no completed items are left ↓ -->
+        <button class="clear-completed">Clear completed</button>
+
+    </script>
 
     <script src="./bower_components/jquery/dist/jquery.js"></script>
     <script src="./bower_components/underscore/underscore.js"></script>
     <script src="./bower_components/backbone/backbone.js"></script>
+    <script src="./bower_components/backbone.localStorage/build/backbone.localStorage.js"></script>
 
     <script src="./models/Todo.js"></script>
     <script src="./collections/todos.js"></script>
 
     <script src="./views/todo-view.js"></script>
     <script src="./views/app-view.js"></script>
+
+    <script src="./routers/todos-router.js"></script>
 
     <script src="./app.js"></script>
 
