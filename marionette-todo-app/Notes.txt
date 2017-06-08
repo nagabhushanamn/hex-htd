@@ -1,0 +1,36 @@
+
+
+
+Library vs Framework
+
+
+
+Library . ( e.g backbone )
+
+   ==> we have to structure applm manulay with best practices
+
+Framework ( e.g Marionette )
+
+   ==> provides default structure with best practices
+
+----------------------------------------------------
+
+
+
+// Todo-App
+
+------------------------------------
+
+Model
+    --> todo
+
+Collection
+    -> todos
+
+Views
+
+    - LayoutView
+        -TodoFormView
+        -TodoListView
+            -TodoView    
+------------------------------------            

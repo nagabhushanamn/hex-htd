@@ -24,7 +24,7 @@ var Layout = Marionette.LayoutView.extend({
     var formView = new FormView({ model: this.model });
     var listView = new ListView({ collection: this.collection });
 
-    //this.showChildView('form', formView);
+    this.showChildView('form', formView);
     this.showChildView('list', listView);
   },
 

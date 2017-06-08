@@ -2,7 +2,7 @@
 
 
 
-  Building large web application using Backbone.js can be hard.
+Building large web application using Backbone.js can be hard.
 
 
  Life in  Backbone.js 
@@ -10,7 +10,7 @@
   -> How do you revder Views?
   -> How do you manage r/s b/w objects?
   -> How do your Views communicate b/w each other
-  -> How do you avoid reating yourself?
+  -> How do you avoid repeating yourself?
   -> How do you manage a View's Lifecycle?
   -> How do you structure your application?
   -> Ho do you prevent memory leaks?
