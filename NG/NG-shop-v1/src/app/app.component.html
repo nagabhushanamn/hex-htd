@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="page-header"> {{name}} </div>
+
+    <div class="list-group">
+        <div *ngFor="let product of products" class="list-group-item">
+            <h3>{{product.name}}</h3>
+            <h4>{{product.price}}</h4>
+            <p>{{product.description}}</p>
+            <button *ngIf="product.canBuy" class="btn btn-primary">Buy</button>
+        </div>
+    </div>
+
+</div>
