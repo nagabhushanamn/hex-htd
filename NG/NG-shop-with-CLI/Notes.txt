@@ -1,0 +1,61 @@
+
+
+data-binding
+-------------------
+
+
+4-ways
+
+  1. Interpolation ( 1-way ) ==> inserting dynamic values in template
+
+     component ===> template
+
+     syntax:
+
+          {{compProp.attr1...}}
+
+
+ 2. Property/Attribute Binding ( 1 -way )
+
+    component ===> template
+
+    e.g
+
+    <img src alt/>
+    <input value/>
+
+    syntax
+    
+    <element-name [propName]="dynamicValue" />
+
+
+3. Event Binding ( 1 -way )
+
+
+    template ===> component
+
+
+    <button (click)="handler()"></button>
+
+
+4. 2-way Binding
+
+
+
+--------------------------------
+
+Directives
+------------
+
+  -> Component .  e.g , AppComponent
+  -> Structural ==> Add,Remove,Replace elements   e.g ngIf,ngFor,ngSwitch,...
+  -> Attribute  ==> the change element's attributes e.g ngStyle,ngClass,...
+
+---------------------------------           
+
+
+Multiple Components
+---------------------
+
+  -Parent
+    -ChildComponents
