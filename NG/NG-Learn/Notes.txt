@@ -59,3 +59,21 @@ Multiple Components
 
   -Parent
     -ChildComponents
+
+-----------------------------------
+
+
+-AppComponent
+
+  -DisplayCountComponent
+
+
+
+  parent ====Input (props)   ====>child(s) 
+
+  parent <===Output (event)  ====>child
+
+
+
+  NG ==> Uni-Direactional Data-Flow
+  --------------------------------------
