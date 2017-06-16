@@ -10,14 +10,8 @@ export class HitButtonComponent implements OnInit {
   @Input()
   incBy: number;
 
-  @Input()
-  mohanInput: number;
-
   @Output()
   hit = new EventEmitter();
-
-  @Output()
-  mohanEvent = new EventEmitter();
 
 
   ngOnInit() {

@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
+import { PriceDiscountPipe } from './pipes/price-discount.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent
+    ProductComponent,
+    PriceDiscountPipe
   ],
   imports: [
     BrowserModule

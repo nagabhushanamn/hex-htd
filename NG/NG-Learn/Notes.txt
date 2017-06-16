@@ -76,4 +76,25 @@ Multiple Components
 
 
   NG ==> Uni-Direactional Data-Flow
+  
   --------------------------------------
+
+
+  can handle forms in 2 ways
+
+
+  -> Template Driven form 
+  -> Reactive(Model-Driven) froms ( adv )
+
+
+
+---------------------------------------
+
+2-way data-binding
+
+
+
+View     Model
+   <----->
+
+---------------------------------------   

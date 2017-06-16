@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-product',
@@ -10,6 +10,12 @@ export class ProductComponent implements OnInit {
   @Input()
   product: any;
 
+  @Input()
+  index: number;
+
+  @Output()
+  buy = new EventEmitter();
+
   currentTab: number = 1;
 
   constructor() { }
@@ -18,8 +24,13 @@ export class ProductComponent implements OnInit {
     event.preventDefault();
     this.currentTab = index;
   }
+
   isTabSelected(index) {
     return this.currentTab === index;
+  }
+
+  buyHandler() {
+    this.buy.emit({ product: this.product }); // 
   }
 
   ngOnInit() {

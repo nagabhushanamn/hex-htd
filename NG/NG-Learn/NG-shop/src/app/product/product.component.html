@@ -1,0 +1,74 @@
+<div class="row">
+
+  <div class="col-xs-4 col-sm-4 col-md-3">
+    <img [src]="product.images[0].full" class="img-responsive" />
+  </div>
+
+  <div class="col-xs-8 col-sm-8 col-md-9">
+
+    <span class="badge">{{index+1}}</span>
+
+    <h4> {{product.name|uppercase}} <small>{{product.makeDate|date:'yyyy'}}</small></h4>
+    <h5 [innerText]="product.price|priceDiscount:product.discount|currency:'INR':true"></h5>
+    <button *ngIf="product.canBuy" class="btn btn-danger" (click)="buyHandler()">buy</button>
+
+    <hr/>
+
+    <section>
+      <ul class="nav nav-tabs">
+        <li [class.active]="isTabSelected(1)"><a href (click)="changeTab(1,$event)">Description</a></li>
+        <li [class.active]="isTabSelected(2)"><a href (click)="changeTab(2,$event)">Specification</a></li>
+        <li [ngClass]="{active:isTabSelected(3),'other-class':true}"><a href (click)="changeTab(3,$event)">Reviews</a></li>
+      </ul>
+      <div class="panel" *ngIf="isTabSelected(1)">
+        <p>{{product.description}}</p>
+      </div>
+      <div class="panel" *ngIf="isTabSelected(2)">
+        <p>Not Yet</p>
+      </div>
+      <div class="panel" *ngIf="isTabSelected(3)">
+
+        <div *ngFor="let review of product.reviews" class="alert alert-danger">
+          <span class="badge">{{review.stars}}</span> &mdash; <span class="badge">{{review.author}}</span>
+          <hr/>
+          <p>{{review.body}}</p>
+        </div>
+
+        <hr/>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"> Review Form </div>
+
+          <div class="panel-body">
+
+            <form>
+              <div class="form-group">
+                <label>Stars</label>
+                <input class="form-control" autofocus name="stars" />
+              </div>
+              <div class="form-group">
+                <label>Autor</label>
+                <input class="form-control" type="email" autofocus name="author" />
+              </div>
+              <div class="form-group">
+                <label>Stars</label>
+                <input class="form-control" name="stars" />
+              </div>
+              <div class="form-group">
+                <label>Body</label>
+                <textarea rows="" cols="" class="form-control"></textarea>
+              </div>
+              <button class="btn btn-primary">Submit</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <pre>
+        {{product|json}}
+    </pre>
+
+  </div>
+</div>
