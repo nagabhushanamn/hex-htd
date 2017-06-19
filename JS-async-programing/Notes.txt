@@ -1,0 +1,29 @@
+
+
+
+// sync
+
+
+function f1(){}
+function f2(){
+    f1();//.....
+}
+
+//async
+
+function f1(){
+    setTimeout(function(){},5000);
+    //.....
+}
+
+//----------------------------------------
+
+
+async APIs
+
+
+ -> promise API
+ -> Reactive Extensions for JavaScript ( RxJS )
+ -> async & await keywords
+
+ -------------------------------------------------

@@ -1,0 +1,15 @@
+<header>
+    <nav class="navbar navbar-default">
+        <div class="navbar-header">
+            <div><a class="navbar-brand">{{title}}</a></div>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="list-group">
+        <div *ngFor="let prod of products|slice:0:10;let idx=index;" class="list-group-item">
+            <app-product [product]="prod" [index]="idx" (buy)="addToCart($event)"></app-product>
+        </div>
+    </div>
+</div>

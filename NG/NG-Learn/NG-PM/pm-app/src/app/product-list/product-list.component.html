@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+
+  <div class="panel-heading">Product List</div>
+  <div class="panel-body">
+    <div *ngIf="products.length===0">No Products </div>
+    <table class="table">
+      <tr *ngFor="let product of products">
+        <td>{{product.name}}</td>
+        <td>{{product.price|currency:'INR':true}}</td>
+        <td>{{product.makeDate|date}}</td>
+        <td><button class="btn btn-default" (click)="editProduct(product.id)" href=""><span class="glyphicon glyphicon-edit"></span></button></td>
+        <td><button class="btn btn-default" (click)="deleteProduct(product.id)" href=""><span class="glyphicon glyphicon-trash"></span></button></td>
+      </tr>
+    </table>
+  </div>
+
+</div>

@@ -1,0 +1,99 @@
+<div class="panel panel-default">
+  <div class="panel-heading"> Customer Form </div>
+
+  <div class="panel-body">
+
+    <div class="col-xs-8 col-sm-8 col-md-6">
+
+      <form [formGroup]="employeeForm" class="well">
+          <div class="form-group">
+            <label for="firstNameId">First Name</label> 
+            <input id="firstNameId" type="text" 
+                  class="form-control"
+                  formControlName="firstName"
+                  placeholder="First Name (required)"
+                  />
+              <div class="help-block">{{firstNameErrorMessage}}</div>    
+          </div>
+          <div class="form-group">
+            <label for="lastNameId">Name Name</label> 
+            <input id="lastNameId" type="text" 
+                  class="form-control"
+                  formControlName="lastName"
+                  placeholder="Last Name (required)"
+                  />
+          </div>
+
+          <div class="form-group">
+          Send Notification : <input type="radio" formControlName="notification" value="email" (click)="toggleNotification('email')"/> &nbsp; Email
+                              <input type="radio" formControlName="notification" value="sms" (click)="toggleNotification('sms')"/> &nbsp;  SMS
+          </div> 
+
+         <div formGroupName="emailGroup" class="well">
+
+            <div class="form-group">
+              <label for="emailId">Email</label> 
+              <input id="emailId" type="text" 
+                    class="form-control"
+                    formControlName="email"
+                    placeholder="Email (required)"
+                    />
+            </div>
+            
+            <div class="form-group">
+              <label for="emailId">Conf Email</label> 
+              <input id="emailId" type="text" 
+                    class="form-control"
+                    formControlName="confEmail"
+                    placeholder="Confirm Email (required)"
+                    />
+            </div>
+
+         </div>  
+
+
+
+           <div class="form-group">
+            <label for="mobileId">Mobile</label> 
+            <input id="mobileId" type="text" 
+                  class="form-control"
+                  formControlName="mobile"
+                  />
+          </div>
+
+           <div class="form-group">
+            <label for="rangeId">Range</label> 
+            <input id="rangeId" type="text" 
+                  class="form-control"
+                  formControlName="range"
+                  placeholder=""
+                  />
+          </div>
+
+        
+          <div class="form-group">
+          Send Catalog : <input type="checkbox" 
+                                formControlName="sendCatalog"/>
+          </div> 
+
+         
+
+
+          <button class="btn btn-success" type="submit" (click)="loadEmployee()">Load</button>
+          <button class="btn btn-primary" type="submit">Save</button>
+      </form>  
+      <hr/>
+      <pre>
+        {{employeeForm.value|json}}
+      </pre>  
+      <!--
+        <pre>
+        {{employee|json}}
+        </pre> 
+       -->
+
+    </div>
+
+  </div>
+
+</div>

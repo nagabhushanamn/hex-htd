@@ -33,6 +33,12 @@ export class ProductComponent implements OnInit {
     this.buy.emit({ product: this.product }); // 
   }
 
+  handleReviewSubmit(reviewForm) {
+    if(reviewForm.invalid)return;
+    this.product.reviews.push(reviewForm.value);
+    reviewForm.reset();
+  }
+
   ngOnInit() {
   }
 

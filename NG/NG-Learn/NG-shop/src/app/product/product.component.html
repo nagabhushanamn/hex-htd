@@ -41,34 +41,58 @@
 
           <div class="panel-body">
 
-            <form>
-              <div class="form-group">
+            <form ngForm #reviewForm="ngForm" (submit)="handleReviewSubmit(reviewForm)">
+              <div class="form-group" [class.has-error]="starsControl.invalid && starsControl.touched">
                 <label>Stars</label>
-                <input class="form-control" autofocus name="stars" />
+                <input class="form-control" autofocus 
+                       name="stars" 
+                       required 
+                       ngModel 
+                       #starsControl="ngModel"/>
+                <div class="help-block" *ngIf="starsControl.invalid && starsControl.touched">
+                    <span *ngIf="starsControl.errors.required">stars required</span>
+                </div>  
               </div>
-              <div class="form-group">
+              <div class="form-group" [class.has-error]="emailControl.invalid && emailControl.touched">
                 <label>Autor</label>
-                <input class="form-control" type="email" autofocus name="author" />
+                <input class="form-control" type="email" 
+                       required name="author" 
+                       ngModel 
+                       #emailControl="ngModel"/>
+                <div class="help-block" *ngIf="emailControl.invalid && emailControl.touched">
+                    <span *ngIf="emailControl.errors.required">email required</span>
+                </div>  
               </div>
-              <div class="form-group">
-                <label>Stars</label>
-                <input class="form-control" name="stars" />
-              </div>
-              <div class="form-group">
+              <div class="form-group" [class.has-error]="bodyControl.invalid && bodyControl.touched">
                 <label>Body</label>
-                <textarea rows="" cols="" class="form-control"></textarea>
+                <textarea rows="" cols="" class="form-control" 
+                          required 
+                          name="body" 
+                          ngModel 
+                          #bodyControl="ngModel"></textarea>
+                <div class="help-block" *ngIf="bodyControl.invalid && bodyControl.touched">
+                    <span *ngIf="bodyControl.errors.required">body required</span>
+                </div> 
               </div>
-              <button class="btn btn-primary">Submit</button>
+              <button class="btn btn-primary" >Submit</button>
             </form>
+
+            <pre>
+              pristine : {{starsControl.pristine}} 
+              dirty    : {{starsControl.dirty}} 
+              untouched: {{starsControl.untouched}}
+              touched  : {{starsControl.touched}}
+              invalid  : {{starsControl.invalid}}
+              valid    : {{starsControl.valid}}
+                  
+            </pre>  
 
           </div>
         </div>
       </div>
     </section>
 
-    <pre>
-        {{product|json}}
-    </pre>
+    <!--<pre>{{product|json}}</pre>-->
 
   </div>
 </div>
