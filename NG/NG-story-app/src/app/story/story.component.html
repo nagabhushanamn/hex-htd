@@ -1,0 +1,12 @@
+<div class="list-group-item story">
+  <div class="">
+    <div class="story">
+      <span class="badge">{{story.name}}</span>
+      <button class="btn btn-sm btn-default pull-right" (click)="onDelete(story.id)">
+        delete
+      </button>
+      <hr/>
+      <p>{{story.body}}</p>
+    </div>
+  </div>
+</div>

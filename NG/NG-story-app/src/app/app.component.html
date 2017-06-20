@@ -1,0 +1,14 @@
+<div>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-brand">{{title}}</div>
+    </div>
+  </nav>
+
+
+  <div class="container">
+    <app-story-form (story)="addNewStory($event)"></app-story-form>
+    <hr/>
+    <app-story-list [stories]="stories"></app-story-list>
+  </div>
+</div>

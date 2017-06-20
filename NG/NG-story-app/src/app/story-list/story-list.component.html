@@ -1,0 +1,14 @@
+<div *ngIf="stories.length === 0">
+  No Stories
+</div>
+<div class="panel panel-default" *ngIf="stories.length > 0">
+  <div class="panel-heading"> StoryList &mdash; <span class="badge">{{stories.length}}</span> </div>
+  <div class="panel-body">
+    <div class="list-group">
+      <app-story *ngFor="let story of stories" 
+                 [story]="story" 
+                 (delete)="deleteStory($event)">
+      </app-story>
+    </div>
+  </div>
+</div>

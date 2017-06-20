@@ -1,0 +1,26 @@
+<div class="container">
+  <button id="toggle-form-btn" 
+          class="btn btn-sm btn-danger" 
+          (click)="toggleShow()">
+    {{show?'Hide':'Show'}}
+  </button>
+  <div class="row" *ngIf="show">
+    <div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading"> Story Form </div>
+        <div class="panel-body">
+          <form id="story-form" [formGroup]="storyForm" (submit)="onSubmit()">
+            <div class="form-group">
+              <label> Email/Name </label>
+              <input autofocus class="form-control" formControlName="name"/>
+            </div>
+            <div class="form-group">
+              <label> story </label>
+              <textarea rows="5" class="form-control" formControlName="body"></textarea>
+            </div>
+            <button class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
