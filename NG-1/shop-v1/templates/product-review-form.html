@@ -1,0 +1,28 @@
+<div class="col-md-6" ng-controller="ReviewFormController">
+
+    <blockquote ng-if="newReview.stars">
+        <p>{{newReview.stars}} <small>{{newReview.author}}</small></p>
+        <p>{{newReview.body}}</p>
+    </blockquote>
+
+    <form name="reviewForm" ng-submit="reviewForm.$valid && addReview(product)" novalidate>
+
+        <div class="form-group">
+            <label>stars</label>
+            <select class="form-control" ng-options="star for star in [1,2,3,4,5]" ng-model="newReview.stars" required="required">
+                                            </select>
+        </div>
+        <div class="form-group">
+            <label>Email/Author</label>
+            <input class="form-control" type="email" ng-model="newReview.author" required="required">
+        </div>
+        <div class="form-group" ng-class="{'has-error':reviewForm.body.$dirty&&reviewForm.body.$error.required}">
+            <label>Body</label>
+            <textarea name="body" rows="5" cols="35" class="form-control" ng-model="newReview.body" required="required">
+											 </textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button> is reviewForm valid : {{reviewForm.$valid}}
+
+    </form>
+
+</div>

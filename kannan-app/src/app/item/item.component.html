@@ -1,0 +1,38 @@
+<div class="bg-info item-margin">
+
+  <div class="container">
+
+    <div class="row" (click)="toggleExpand()">
+
+      <div class="col-md-1">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </div>
+      <div class="col-md-1">{{item.id}}</div>
+      <div class="col-md-2">{{item.owner}}</div>
+      <div class="col-md-3">{{item.timeStarted|date:'medium'}}</div>
+      <div class="col-md-2">{{item.state}}</div>
+      <div class="col-md-2"></div>
+
+    </div>
+
+    <div class="row" *ngIf="expand">
+      <div class="top-margin">
+        <div class="col-md-2 box-border">
+          Metrics
+        </div>
+        <div class="col-md-2 box-border">
+          Build
+        </div>
+        <div class="col-md-2 box-border">
+          <p-chart type="pie" [data]="data"></p-chart>
+        </div>
+        <div class="col-md-2 box-border">
+          Unknown
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>

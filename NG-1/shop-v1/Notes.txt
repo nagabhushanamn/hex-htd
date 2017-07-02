@@ -1,0 +1,33 @@
+
+
+// How to bootstrap Ng Appln
+// MVC or MVVM arch
+// Event handling
+// Form Management
+// Custom Directives
+// Services
+
+
+
+
+    
+
+
+    Angular 1.x
+
+
+    View-Logic
+    -------------
+     -> Controller
+     -> Filter
+     -> Directives
+
+    Business-Logic
+    ---------------
+
+    -> Services
+
+
+    
+
+

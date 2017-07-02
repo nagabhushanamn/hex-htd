@@ -1,0 +1,16 @@
+
+.item-margin{
+    margin: 5px;
+    padding: 6px;
+    border: 2px solid #2CB4CD
+}
+
+.box-border{
+     border: 2px solid #2CB4CD;
+     padding: 3px;
+     margin: 10px;
+}
+
+.top-margin{
+    margin-top: 20px;
+}

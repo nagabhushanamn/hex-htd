@@ -1,0 +1,19 @@
+
+
+
+existing runtimes
+
+   -> c , c++
+   -> c#
+   -> java
+
+
+
+   will do IO operations are Blocking
+
+
+   ----------------------------------------
+
+    Non-Bloking-IO runtime  ==> Node.js
+
+    

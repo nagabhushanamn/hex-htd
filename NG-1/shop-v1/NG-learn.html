@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
+
+    <style>
+        .ng-scope {
+            border: 1px solid red;
+            margin: 5px;
+        }
+    </style>
+
+</head>
+
+<body class="container">
+
+    <div class="page-header"> NG - learn</div>
+
+
+    <div class="jumbotron" ng-app="demo">
+        <button ng-click="changeColor()" class="btn btn-sm btn-primary">change</button>
+        <span class="badge">{{color}}</span>
+
+        <div class="well" ng-controller="ColorController">
+            <button ng-click="changeColor()" class="btn btn-sm btn-primary">change</button>
+            <span class="badge">{{color}}</span>
+            <span class="badge">{{text}}</span>
+        </div>
+
+        <div class="well" ng-controller="ColorController">
+            <button ng-click="changeColor()" class="btn btn-sm btn-primary">change</button>
+            <span class="badge">{{color}}</span>
+            <span class="badge">{{text}}</span>
+
+            <div class="well" ng-controller="TextController">
+                <span class="badge">{{color}}</span>
+                <span class="badge">{{text}}</span>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    </div>
+    {{color}}
+
+    <script src="./bower_components/angular/angular.js"></script>
+
+    <script>
+        let mod = angular.module('demo', []);
+        mod.run(function ($rootScope) {
+            $rootScope.color = "RED";
+            $rootScope.changeColor = function () {
+                $rootScope.color = "NEW RED";
+            }
+            $rootScope.$on('color-change', function (event, data) {
+                $rootScope.color = data.color;
+            });
+        });
+
+        mod.controller('ColorController', function ($scope) {
+            $scope.color = "Green";
+            $scope.changeColor = function () {
+                $scope.color = "NEW GREEN";
+                $scope.$emit('color-change', { color: $scope.color });
+                $scope.$broadcast('color-change', { color: $scope.color });
+            }
+        });
+
+        mod.controller('TextController', function ($scope) {
+            $scope.text = "ANGULAR";
+            $scope.$on('color-change', function (event, data) {
+                console.log('color change event..');
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

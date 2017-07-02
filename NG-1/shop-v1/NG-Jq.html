@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="./bower_components/jquery-ui/themes/black-tie/jquery-ui.css" rel="stylesheet">
+</head>
+
+<body class="container" ng-app="demo">
+
+    <div class="page-header"> NG - learn</div>
+
+    <input my-date/>
+    <input my-date/>
+    <input my-date/>
+    <input my-date ng-model=""/>
+
+
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+    <script src="./bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="./bower_components/angular/angular.js"></script>
+
+    <script>
+        let mod = angular.module('demo', []);
+
+        // $(function(){
+        //     $('input').datepicker();
+        // })
+
+        mod.directive('myDate', function () {
+            return {
+                restrict: 'A',
+                link: function (scope, ele, attr) {
+                    console.log('link')
+                    ele.datepicker();
+                }
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

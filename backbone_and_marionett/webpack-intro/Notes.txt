@@ -1,6 +1,0 @@
-
-
-webpack
-
-   --> plugins ( HTML Webpack plugin)
-   --> loaders . ( css )
